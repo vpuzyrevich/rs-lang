@@ -1,0 +1,46 @@
+@import "../../style/abstract";
+
+
+.statistics {
+  color: $dark-color;
+  background: -webkit-radial-gradient(top left, #c1c1f966 30%, #5656A6);
+ 
+  min-height: $min-content-height;   
+  &__wrapper{
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  h1, h2, h3{
+    text-align: center;
+  }
+  h1, h2{
+    margin: 20px auto;
+  }
+  h3{
+    font-weight: 400;
+  }
+
+  
+}
+.no-statistics{
+  margin-top: calc(100vh / 2 - 100px);
+  color: $light-color;
+  font-size: 3rem;
+  text-shadow: 0.2rem 0.2rem 3rem $main-bg-color;
+  text-align: center;
+  width: 100%;
+}
+.gamestats-container{
+  padding: 20px;
+  display: flex;
+  gap: 30px;
+  @include media-mobile{
+    flex-direction: column;
+  }
+}
+
+
+

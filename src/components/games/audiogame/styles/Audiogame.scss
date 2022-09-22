@@ -1,0 +1,71 @@
+.audiogame {
+  height: 100%;
+  &__hearts {
+    margin-bottom: 55px;
+  }
+  &__heart {
+    font-size: 28px;
+  }
+  &__wrapper {
+    background-image: url(../../../../assets/img/audio-game-bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  &__audio-icon {
+    max-width: 140px;
+    width: 100%;
+    margin-bottom: 55px;
+    transition: .3s;
+  }
+  &__audio-icon:hover {
+    cursor: pointer;
+    transition: .3s;
+    opacity: .7;
+  }
+  &__revealed {
+    font-size: 36px;
+    margin-bottom: 35px;
+    text-transform: capitalize;
+  }
+  &__revealed-word {
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  &__revealed-translate {
+    opacity: .6;
+    text-align: center;
+  }
+  &__audio-icon:focus, &__audio-icon:active {
+    transform: scale(1);
+  }
+  &__options {
+    display: flex;
+    gap: 15px;
+    justify-content: start;
+    @media (max-width: 605px) {
+      flex-direction: column;
+    }
+  }
+  &__options-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #BFACE0;
+    padding: 5px 10px;
+    font-size: 22px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover, &:focus, &:active {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../style/abstract";
+
+
+.header__logo {
+  margin-top: 1rem;
+    height: $header-height;
+    pointer-events: none;
+    cursor: pointer;
+    height: calc($header-height + $menu-height - 1rem);
+  }
+  
+  .header {
+    background-color: $main-bg-color;
+    height: $header-height;
+   
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  .header__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  

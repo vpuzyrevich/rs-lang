@@ -1,0 +1,220 @@
+@import '../../../style/abstract';
+.sprint {
+  background-image: url(../../../assets/img/sprint-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 100%;
+  &-wrapper {
+    padding: 1vh 50px 0 50px;
+    margin: 0 auto;
+    max-width: $max-width-desktop;
+    @include media-mobile() {
+      padding: 10px;
+    }
+  }
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    border: 2px solid rgb(111, 209, 152);
+    @include media-mobile() {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  &-time {
+    font-size: 36px;
+    color: $text-color;
+    @include media-mobile() {
+      font-size: 26px;
+    }
+  }
+  &-total {
+    font-size: 54px;
+    color: $text-color;
+    @include media-mobile() {
+      font-size: 32px;
+    }
+  }
+  &-card {
+    margin: auto;
+    margin-top: 10px;
+    width: 600px;
+    height: 60vh;
+    border-radius: 15px;
+    background: $bg-transparent;
+    border: 1px solid #ffffff;
+    @include media-mobile() {
+      width: 100%;
+    }
+  }
+}
+.card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3vh;
+  height: 12vh;
+}
+.circle-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-color: rgba(44, 43, 43, 0.3);
+  @include media-mobile() {
+    height: 20px;
+    width: 20px;
+  }
+}
+.points {
+  font-size: 20px;
+  color: $text-color;
+}
+.card {
+  &-star {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 8vh;
+    @include media-mobile() {
+      height: 60px;
+    }
+  }
+  &-star-img {
+    height: 40px;
+    filter: invert(85%) sepia(4%) saturate(147%) hue-rotate(314deg) brightness(92%) contrast(86%);
+    @include media-mobile() {
+      height: 30px;
+    }
+  }
+  &-words {
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  &-word {
+    font-size: 36px;
+    color: $text-color;
+    @include media-mobile() {
+      font-size: 32px;
+    }
+  }
+  &-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 30px;
+    gap: 100px;
+    height: 14vh;
+    border-top: 2px dotted #ffffff;
+    @include media-mobile() {
+      justify-content: space-around;
+      gap: 0px;
+    }
+  }
+}
+.word-ru {
+  color: #d1c9c9;
+}
+.button {
+  padding-bottom: 20px;
+  width: 140px;
+  height: 55px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  color: $text-color;
+  transition: all 0.4s;
+  @include media-mobile() {
+    height: 45px;
+    width: 110px;
+    font-size: 16px;
+  }
+}
+.button:hover {
+  box-shadow: rgb(0 0 0 / 20%) 0px 0px 20px;
+  cursor: pointer;
+}
+.btn-false {
+  position: relative;
+  background-color: rgb(198, 109, 109);
+}
+.btn-false::after {
+  content: url(../../../assets/icon/left-arrow.svg);
+  position: absolute;
+  width: 25px;
+  bottom: -5px;
+  right: 55px;
+  filter: invert(85%) sepia(0%) saturate(0%) hue-rotate(285deg) brightness(87%) contrast(85%);
+  @include media-mobile() {
+    right: 49px;
+    width: 20px;
+    bottom: -3px;
+  }
+}
+.btn-true {
+  position: relative;
+  background-color: rgb(92, 177, 127);
+}
+.btn-true::after {
+  content: url(../../../assets/icon/right-arrow.svg);
+  position: absolute;
+  width: 25px;
+  bottom: -5px;
+  right: 55px;
+  filter: invert(85%) sepia(0%) saturate(0%) hue-rotate(285deg) brightness(87%) contrast(85%);
+  @include media-mobile() {
+    right: 49px;
+    width: 20px;
+    bottom: -3px;
+  }
+}
+.active-circle {
+  position: relative;
+  background-color: rgb(95, 202, 149);
+}
+.active-circle::after {
+  content: '';
+  position: absolute;
+  background-image: url(../../../assets/icon/check.svg);
+  width: 20px;
+  height: 20px;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  top: 3px;
+  left: 3px;
+  filter: invert(93%) sepia(23%) saturate(0%) hue-rotate(188deg) brightness(87%) contrast(88%);
+  @include media-mobile() {
+    height: 15px;
+    width: 15px;
+    background-size: 14px;
+  }
+}
+
+.active-star {
+  filter: invert(100%) sepia(59%) saturate(1691%) hue-rotate(0deg) brightness(84%) contrast(86%);
+}
+
+.hide {
+  display: none;
+}

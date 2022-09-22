@@ -1,0 +1,50 @@
+@import "../../style/abstract";
+
+.menu {
+   background-color: $main-bg-color;
+   font-size: 2rem;
+    gap: 10px;
+    & li {
+      list-style-type: none;
+    }
+    & ul {
+      display: flex;
+      justify-content: center;
+     
+    }
+  
+}
+.menu__item {
+  display: block;  
+  padding: 5 px;
+  margin: 5px 20px;
+  text-align: center;
+  color: $light-color;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 400;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05);  
+  }  
+}
+.content {
+  flex-grow: 1;
+  width: 100%;
+  height: calc(100vh - $header-height - $menu-height);
+}
+.menu__list{
+  margin: 0 auto;
+}
+.menu__auth {
+  padding-top: 7px;
+  width: 120px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: $section2-color;
+  box-shadow: rgb(0 0 0 / 30%) 0px 0px 15px;
+}
+.menu__logout {
+  background-color: rgb(232, 176, 113);
+  box-shadow: rgb(0 0 0 / 30%) 0px 0px 15px;
+}

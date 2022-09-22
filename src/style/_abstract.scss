@@ -1,0 +1,33 @@
+//colors
+$main-bg-color: #5656a6;
+$light-bg-color:rgb(201, 201, 246);
+$light-color: rgb(226, 226, 252);
+$dark-color: rgb(53, 53, 102);
+
+$section1-color: rgb(120, 195, 162);
+$section2-color: rgb(88, 191, 205);
+$section3-color: rgb(105, 125, 218);
+$section4-color: rgb(162, 112, 183);
+$section5-color: rgb(240, 166, 80);
+$section6-color: rgb(224, 94, 94);
+$section7-color: red;
+$text-color: #ffffff;
+$bg-transparent: rgba(255, 255, 255, 0.1);
+$box-shadow: rgb(0 0 0 / 20%) 0px 0px 15px;
+
+//constants
+
+$max-width-desktop: 1280px;
+$max-width-mobile: 768px;
+$min-width-mobile: 360px;
+$header-height: 60px;
+$header-height-mobile: 120px;
+$footer-height: 60px;
+$menu-height: calc(2rem + 10px);
+$min-content-height: calc(100vh - ($header-height + $footer-height + $menu-height));
+
+//mixin
+
+@mixin media-mobile {
+    @media screen and (max-width: $max-width-mobile) { @content; }
+}

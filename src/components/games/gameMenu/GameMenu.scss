@@ -1,0 +1,84 @@
+@import '../../../style/abstract';
+
+.game-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: rgb(192, 188, 230);
+  @include media-mobile() {
+    padding: 0 10px;
+  }
+  &-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 700px;
+    height: 300px;
+    border-radius: 50px;
+    background-color: rgba(172, 164, 164, 0.3);
+    box-shadow: rgb(0 0 0 / 20%) 0px 0px 30px;
+    @include media-mobile() {
+      width: 100%;
+    }
+  }
+  &-decription {
+    font-size: 22px;
+    line-height: 32px;
+    text-align: center;
+    color: $text-color;
+    @include media-mobile() {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+  &-level {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    @include media-mobile() {
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+  &-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    font-size: 22px;
+    color: $text-color;
+    transition: all 0.5s;
+    @include media-mobile() {
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+    }
+  }
+  &-btn:hover {
+    box-shadow: rgb(0 0 0 / 20%) 0px 0px 15px;
+    cursor: pointer;
+  }
+  &-btn:nth-child(1) {
+    background-color: $section1-color;
+  }
+  &-btn:nth-child(2) {
+    background-color: $section2-color;
+  }
+  &-btn:nth-child(3) {
+    background-color: $section3-color;
+  }
+  &-btn:nth-child(4) {
+    background-color: $section4-color;
+  }
+  &-btn:nth-child(5) {
+    background-color: $section5-color;
+  }
+  &-btn:nth-child(6) {
+    background-color: $section6-color;
+  }
+}

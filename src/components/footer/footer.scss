@@ -1,0 +1,64 @@
+@import "../../style/abstract";
+
+
+.footer {
+    background-color: $main-bg-color;
+    height: $footer-height;  
+    color: $light-color;
+    display: flex;
+    flex-direction: column;  
+    justify-content:center;
+    @include media-mobile {
+      height: $header-height-mobile;
+      padding: 20px 10px;
+    }
+  }
+  .footer__wrapper {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include media-mobile {
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+  .footer__logo {
+    display: block;
+    background-image: url("../../assets/icon/rss.svg");
+    width:70px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .footer__team {
+    font-size: 1.6rem;
+    display:flex;
+    justify-content: flex-end;
+    gap: 3.5rem;
+
+    @include media-mobile{
+      font-size: 1.4rem;
+    }
+
+  }
+  .git-nickname{
+    position: relative;
+    text-decoration: none;
+}
+.git-nickname::before{
+    content:"";
+    position: absolute;
+    left: -2.5rem;
+    top: -0.1rem;
+    background-image: url("../../assets/icon/github_white.svg");
+    height: 2rem;
+    width: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.git-nickname:hover{
+  transform: scale(1.1);
+}

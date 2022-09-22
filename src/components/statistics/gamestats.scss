@@ -1,0 +1,36 @@
+@import "../../style/abstract";
+
+
+.gamestats__heading{
+    width: 250px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 30px;
+    background-size: contain;
+    color: white;
+    font-weight: 600;
+    text-shadow: 0.2rem 0.2rem 0.7rem $main-bg-color;
+}
+
+
+.game1 {
+    background-image: url("../../assets/img/sprint-bg.png");
+}
+
+.game2 {
+    background-image: url("../../assets/img/audio-game-bg.jpeg");
+}
+table{
+    font-size: 2rem;
+    & td{
+        padding: 0.5rem;
+        vertical-align: middle;
+    }
+    & .col1{
+        max-width: calc($min-width-mobile - 60px);
+    }
+}
